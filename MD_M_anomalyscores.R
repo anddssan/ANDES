@@ -50,7 +50,7 @@ analyze_moment_features <- function(input_file, output_file) {
   neglog10pvalue.adjusted.inflation.non.inf <- neglog10pvalue.adjusted.inflation[Non.Inf]
 
   dt2$p_value_adjusted <- 10^(-neglog10pvalue.adjusted.inflation.non.inf)
-  dt2$neglog10pvalues_adjusted <- neglog10pvalue.adjusted.inflation.non.inf
+  dt2$neglog10pvalue_adjusted <- neglog10pvalue.adjusted.inflation.non.inf
   
   write.csv(dt2, file = output_file, row.names = FALSE)
 }
