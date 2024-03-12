@@ -56,7 +56,7 @@ analyze_moment_features <- function(input_file, output_file) {
 
 main <- function() {
   input_file <- "moment_features.csv"
-  output_file <- "MD-F_anomaly_score.csv"
+  output_file <- "MD-M_anomaly_score.csv"
   analyze_moment_features(input_file, output_file)
 }
 
