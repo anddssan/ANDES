@@ -109,7 +109,7 @@ fda_to_anomalyscore <- function(input_fda_path){
   neglog10pvalue.adjusted.inflation.non.inf <- neglog10pvalue.adjusted.inflation[Non.Inf]
   
   dt2$p_value_adjusted <- 10^(-neglog10pvalue.adjusted.inflation.non.inf) 
-  dt2$neglog10pvalues_adjusted <- neglog10pvalue.adjusted.inflation.non.inf
+  dt2$neglog10pvalue_adjusted <- neglog10pvalue.adjusted.inflation.non.inf
   
   return(dt2)
 }
