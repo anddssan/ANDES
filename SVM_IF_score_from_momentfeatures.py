@@ -16,7 +16,7 @@ def perform_one_class_svm(input_file):
     dt = pd.read_csv(input_file)
     dt_noinf = dt[~dt.isin([np.nan, np.inf, -np.inf]).any(1)]
 
-    X = dt_noinf.iloc[:, 2:34]
+    X = dt_noinf.iloc[:, 2:]
 
     # Normalization
     scaler = StandardScaler()
@@ -37,7 +37,7 @@ def perform_isolation_forest(input_file):
     dt = pd.read_csv(input_file)
     dt_noinf = dt[~dt.isin([np.nan, np.inf, -np.inf]).any(1)]
 
-    X = dt_noinf.iloc[:, 2:34]
+    X = dt_noinf.iloc[:, 2:]
 
     # Normalization
     scaler = StandardScaler()
@@ -55,16 +55,21 @@ def perform_isolation_forest(input_file):
     return datafm2
 
 def main():
-    input_file = "moment_features.csv"
+    input_moments = "moment_features.csv"
+    input_fda = "fda_features.csv"
     
-    scoresvm = perform_one_class_svm(input_file)
-    scoreif = perform_isolation_forest(input_file)
+    scoresvm_mom = perform_one_class_svm(input_moments)
+    scoreif_mom = perform_isolation_forest(input_moments)
+    scoreif_fda = perform_isolation_forest(input_fda)
     
-    output_file_svm = "SVM_score.csv"
-    output_file_if = "IF_score.csv"
+    output_moments_svm = "SVM_score_from_moments.csv"
+    output_moments_if = "IF_score_from_moments.csv"
+    output_fda_if = "IF_score_from_fda.csv"
     
-    scoresvm.to_csv(output_file_svm, index=None)
-    scoreif.to_csv(output_file_if, index=None)
+    scoresvm_mom.to_csv(output_moments_svm, index=None)
+    scoreif_mom.to_csv(output_moments_if, index=None)
+    scoreif_fda.to_csv(output_fda_if, index=None)
 
 # Run the main function
 main()
+
