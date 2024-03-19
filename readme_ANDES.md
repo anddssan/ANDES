@@ -52,7 +52,7 @@ Format of ANDES.sh file
 Command #1:      
 ----------
 
-    python ./vcf_ss_M_features.py --vcf "$1"
+    python ./vcf_ss_M_features.py --vcf "$@"
 
 This command calls a Python script for generating summary statistics and moment features from the .vcf files.
  
