@@ -18,7 +18,7 @@ If you find any issues running ANDES, then please contact Ria Kanjilal directly 
 ---------------	
 Getting started
 ---------------
-Before you are able to use the ANDES, a Python and R package, you must ensure that the following packages are installed in your computational environment:
+Before you are able to use the ANDES, a Python and R package, you must ensure that the following Python packages are installed in your computational environment:
 
     pip install pandas
     pip install numpy
