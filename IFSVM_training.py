@@ -14,7 +14,7 @@ from sklearn.ensemble import IsolationForest
 
 def isolation_forest(input_file):
     dt = pd.read_csv(input_file)
-    dt_noinf = dt[~dt.isin([np.nan, np.inf, -np.inf]).any(1)]
+    dt_noinf = dt[~dt.isin([np.nan, np.inf, -np.inf]).any(axis=1)]
 
     X = dt_noinf.iloc[:, 2:]
 
@@ -35,7 +35,7 @@ def isolation_forest(input_file):
 
 def oneclass_svm_minibatchtraining(input_file, num_sets, interval_size):
     dt = pd.read_csv(input_file)
-    dt_noinf = dt[~dt.isin([np.nan, np.inf, -np.inf]).any(1)]
+    dt_noinf = dt[~dt.isin([np.nan, np.inf, -np.inf]).any(axis=1)]
 
     X = dt_noinf.iloc[:, 2:]
 
@@ -80,9 +80,9 @@ def main():
     output_moments_svm = "./SVMscores_M.csv"
     output_fda_svm = "./SVMscores_F.csv"
     
-    scoreif_mom.to_csv(output_moments_if, index=None)
-    scoreif_fda.to_csv(output_fda_if, index=None)
-    scoresvm_mom.to_csv(output_moments_svm, index=None)
-    scoresvm_fda.to_csv(output_fda_svm, index=None)
+    scoreif_mom.to_csv(output_moments_if, index=False)
+    scoreif_fda.to_csv(output_fda_if, index=False)
+    scoresvm_mom.to_csv(output_moments_svm, index=False)
+    scoresvm_fda.to_csv(output_fda_svm, index=False)
 
 main()
