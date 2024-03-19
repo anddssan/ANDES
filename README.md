@@ -48,7 +48,7 @@ If execution permission is needed, run the following command:
 -----------------------
 Format of ANDES.sh file
 -----------------------
-### Command #1:
+#### Command #1:
 
     python ./vcf_ss_M_features.py --vcf "$@"
 
@@ -61,7 +61,7 @@ The above operation will output two files, one including summary statistics gene
     SS.csv
     M_features.csv
 
-### Command #2:
+#### Command #2:
 
     Rscript ./ss_fda_features.R
 
@@ -71,7 +71,7 @@ The above operation will output the FDA features in the following file:
 
     fda_features.csv
 
-### Command #3:
+#### Command #3:
 
     Rscript ./MD_MF_scores.R
 
@@ -82,7 +82,7 @@ The above operation will output the following files:
     MD-M_anomalyscores.csv
     MD-F_anomalyscores.csv
 
-### Command #4:
+#### Command #4:
 
     python ./IFSVM_training.py
 
@@ -95,7 +95,7 @@ The above operation will output the following files:
     SVMscores_M.csv
     SVMscores_F.csv
 
-### Command #5:
+#### Command #5:
 
     Rscript ./IFSVM_MF_anomalyscores.R
 
