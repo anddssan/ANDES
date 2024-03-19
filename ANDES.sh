@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## Command #1
-python ./vcf_ss_M_features.py --vcf "$1"
+python ./vcf_ss_M_features.py --vcf "$@"
 
 ## Command #2
 Rscript ./ss_fda_features.R
