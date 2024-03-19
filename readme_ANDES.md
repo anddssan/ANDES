@@ -3,7 +3,7 @@
 ANDES is a Python and R implementation of Kanjilal, Campelo dos Santos, Arnab, DeGiorgio and Assis' (2024) suite of methods that merge the power of unsupervised anomaly detection algorithms with feature extraction techniques to identify anomalous regions of the genome associated with various biological factors or technical artifacts.
 
 -------------
-Citing CLOUDe
+Citing ANDES
 -------------
 Thank you for using the ANDES.
 
